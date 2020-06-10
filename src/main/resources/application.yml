@@ -1,5 +1,15 @@
 spring:
   application:
     name: neo4j-domain-name-system
+  main:
+    banner-mode: console
   profiles:
     active: dev
+
+logging:
+  level:
+    org.apache.tomcat: warn
+    org.apache.catalina: warn
+    org.apache.coyote: warn
+    org.springframework: warn
+    org.neo4j: warn
