@@ -10,14 +10,22 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SpringBootTest
 @DisplayName("Application Launching Tests")
-class Neo4jDomainNameSystemApplicationTests {
+public class Neo4jDomainNameSystemApplicationTests {
+
+    private ApplicationContext context;
+
+    public ApplicationContext getContext() {
+        return context;
+    }
 
     @Autowired
-    private ApplicationContext context;
+    public void setContext(ApplicationContext context) {
+        this.context = context;
+    }
 
     @Test
     @DisplayName("Context Load Test")
-    void contextLoads() {
-        assertNotNull(context);
+    public void contextLoads() {
+        assertNotNull(getContext());
     }
 }
