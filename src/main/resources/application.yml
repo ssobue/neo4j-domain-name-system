@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: neo4j-domain-name-system
+  profiles:
+    active: dev
